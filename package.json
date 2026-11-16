@@ -1,0 +1,18 @@
+{
+  "name": "les-deux-anneaux",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Site et application de la salle dînatoire Les Deux Anneaux — MERN (MongoDB, Express, React, Node)",
+  "scripts": {
+    "install:all": "npm install && npm install --prefix server && npm install --prefix client",
+    "dev": "concurrently -n api,web -c yellow,cyan \"npm run dev --prefix server\" \"npm run dev --prefix client\"",
+    "build": "npm run build --prefix client",
+    "start": "npm start --prefix server"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
